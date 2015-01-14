@@ -41,8 +41,30 @@ module decode_stage {
 	
 	assign complete = (memtoreg ^ nmemtoreg) & (memwrite ^ nmemwrite) & (pcsrc ^ npcsrc) & (alusrc ^ nalusrc) & (&(alucontrol ^ nalucontrol)) & (regdst ^ nregdst) & (regwrite ^ nregwrite) & (jump ^ njump);
 	
+	pmos p1(memtoreg, 1, precharge);
+	pmos p2(memwrite, 1, precharge);
+	pmos p3(pcsrc, 1, precharge);
+	pmos p4(alusrc, 1, precharge);
+	pmos p5(regdst, 1, precharge);
+	pmos p6(regwrite, 1, precharge);
+	pmos p7(jump, 1, precharge);
+	pmos p8(alucontrol[2], 1, precharge);
+	pmos p9(alucontrol[1], 1, precharge);
+	pmos p10(alucontrol[0], 1, precharge);
+	
+	pmos pn1(nmemtoreg, 1, precharge);
+	pmos pn2(nmemwrite, 1, precharge);
+	pmos pn3(npcsrc, 1, precharge);
+	pmos pn4(nalusrc, 1, precharge);
+	pmos pn5(nregdst, 1, precharge);
+	pmos pn6(nregwrite, 1, precharge);
+	pmos pn7(njump, 1, precharge);
+	pmos pn8(nalucontrol[2], 1, precharge);
+	pmos pn9(nalucontrol[1], 1, precharge);
+	pmos pn10(nalucontrol[0], 1, precharge);
+
 	always @(*) begin
-		if (precharge) begin
+		/**if (precharge) begin
 			memtoreg = 1'b1;
 			memwrite = 1'b1;
 			pcsrc = 1'b1;
@@ -62,7 +84,8 @@ module decode_stage {
 			nalucontrol = 3'b111;
 		
 		end
-		else begin
+		else**/
+		if (~precharge) begin
 			pcsrc = branch & zero; //only works for single cycle cpu - needs control and pipelining
 			//also needs to support other branches than only bez 
 			
