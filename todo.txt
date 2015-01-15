@@ -1,5 +1,5 @@
 TO DO:
-1) ALU
+1) ALU - mostly done - no barrel shifter
 2) Multiplier
 3) Data hazard controller
 4) 
