@@ -1,0 +1,9 @@
+TO DO:
+1) ALU
+2) Multiplier
+3) Data hazard controller
+4) 
+
+DONE:
+1) decoder
+2) control hazard controller
