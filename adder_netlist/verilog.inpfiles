@@ -1,0 +1,32 @@
+// Verilog HDL and netlist files of
+// "16nm Martin_Add32 schematic"
+
+// Netlisted models
+
+// netlist file - 16nm, TH44, schematic.
+ihnl/cds0/netlist
+// netlist file - 16nm, inv_1x, schematic.
+ihnl/cds1/netlist
+// netlist file - 16nm, Martin_Sum, schematic.
+ihnl/cds2/netlist
+// netlist file - 16nm, Martin_Carry, schematic.
+ihnl/cds3/netlist
+// netlist file - 16nm, nor_1x, schematic.
+ihnl/cds4/netlist
+// netlist file - 16nm, or2_1x, schematic.
+ihnl/cds5/netlist
+// netlist file - 16nm, Martin_Add, schematic.
+ihnl/cds6/netlist
+// netlist file - 16nm, Martin_Add4, schematic.
+ihnl/cds7/netlist
+// netlist file - 16nm, TH22, schematic.
+ihnl/cds8/netlist
+// netlist file - 16nm, Martin_Add32, schematic.
+ihnl/cds9/netlist
+
+
+// End HDL models
+
+// globals file 
+hdlFilesDir/cds_globals.v
+

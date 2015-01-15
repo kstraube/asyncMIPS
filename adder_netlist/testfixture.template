@@ -1,0 +1,31 @@
+
+`timescale 1ps / 1ps
+
+module test;
+
+
+wire  Req, df, dt;
+
+reg  cf, ct;
+
+wire [31:0]  st;
+wire [31:0]  sf;
+
+reg [31:0]  at;
+reg [31:0]  af;
+reg [31:0]  bt;
+reg [31:0]  bf;
+
+
+
+Martin_Add32 top(Req, df, dt, sf, st, af, at, bf, bt, cf, ct); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /root/Desktop/Cadence/verilog_test/testfixture.verilog file
+`include "/root/Desktop/Cadence/verilog_test/testfixture.verilog"
+
+`endif
+
+endmodule 

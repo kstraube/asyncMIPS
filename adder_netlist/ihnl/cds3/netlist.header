@@ -1,0 +1,18 @@
+// Library - 16nm, Cell - Martin_Carry, View - schematic
+// LAST TIME SAVED: Aug 12 02:19:30 2014
+// NETLIST TIME: Jan 14 22:11:38 2015
+`timescale 1ps / 1ps 
+
+module Martin_Carry ( df, dt, af, at, bf, bt, cf, ct );
+
+output  df, dt;
+
+input  af, at, bf, bt, cf, ct;
+
+
+specify 
+    specparam CDS_LIBNAME  = "16nm";
+    specparam CDS_CELLNAME = "Martin_Carry";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

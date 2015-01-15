@@ -1,0 +1,28 @@
+inv_1x I7 ( df, dfBar);
+inv_1x I0 ( dt, dtBar);
+nfet  M13 ( .D(dfBar), .B(cds_globals.gnd_), .G(cf), .S(net5));
+nfet  M12 ( .D(net5), .B(cds_globals.gnd_), .G(bf),
+     .S(cds_globals.gnd_));
+nfet  M11 ( .D(net5), .B(cds_globals.gnd_), .G(af),
+     .S(cds_globals.gnd_));
+nfet  M10 ( .D(net21), .B(cds_globals.gnd_), .G(bf),
+     .S(cds_globals.gnd_));
+nfet  M4 ( .D(dtBar), .B(cds_globals.gnd_), .G(ct), .S(net11));
+nfet  M3 ( .D(net11), .B(cds_globals.gnd_), .G(bt),
+     .S(cds_globals.gnd_));
+nfet  M2 ( .D(net11), .B(cds_globals.gnd_), .G(at),
+     .S(cds_globals.gnd_));
+nfet  M1 ( .D(net43), .B(cds_globals.gnd_), .G(bt),
+     .S(cds_globals.gnd_));
+nfet  M0 ( .D(dtBar), .B(cds_globals.gnd_), .G(at), .S(net43));
+nfet  M9 ( .D(dfBar), .B(cds_globals.gnd_), .G(af), .S(net21));
+pfet  M17 ( .D(net19), .B(net3), .G(at), .S(cds_globals.vdd_));
+pfet  M16 ( .D(net18), .B(net3), .G(af), .S(net19));
+pfet  M15 ( .D(net17), .B(net3), .G(bt), .S(net18));
+pfet  M14 ( .D(dfBar), .B(net3), .G(bf), .S(net17));
+pfet  M8 ( .D(net41), .B(net9), .G(at), .S(cds_globals.vdd_));
+pfet  M7 ( .D(net40), .B(net9), .G(af), .S(net41));
+pfet  M6 ( .D(net39), .B(net9), .G(bt), .S(net40));
+pfet  M5 ( .D(dtBar), .B(net9), .G(bf), .S(net39));
+
+endmodule

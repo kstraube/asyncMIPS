@@ -1,0 +1,22 @@
+// Library - 16nm, Cell - or2_1x, View - schematic
+// LAST TIME SAVED: Aug 11 19:08:23 2014
+// NETLIST TIME: Jan 14 22:11:38 2015
+`timescale 1ps / 1ps 
+
+module or2_1x ( Y, A, B );
+
+output  Y;
+
+input  A, B;
+
+
+specify 
+    specparam CDS_LIBNAME  = "16nm";
+    specparam CDS_CELLNAME = "or2_1x";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+nor_1x I6 ( AnorB, A, B);
+inv_1x I7 ( Y, AnorB);
+
+endmodule

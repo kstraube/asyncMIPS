@@ -1,0 +1,21 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+initial
+begin 
+
+   af[31:0] = 32'b00000000000000000000000000000000;
+
+   at[31:0] = 32'b00000000000000000000000000000000;
+
+   bf[31:0] = 32'b00000000000000000000000000000000;
+
+   bt[31:0] = 32'b00000000000000000000000000000000;
+
+   cf = 1'b0;
+   ct = 1'b0;
+end 

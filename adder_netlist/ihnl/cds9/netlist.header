@@ -1,0 +1,26 @@
+// Library - 16nm, Cell - Martin_Add32, View - schematic
+// LAST TIME SAVED: Aug 14 03:00:10 2014
+// NETLIST TIME: Jan 14 22:11:39 2015
+`timescale 1ps / 1ps 
+
+module Martin_Add32 ( Req, df, dt, sf, st, af, at, bf, bt, cf, ct );
+
+output  Req, df, dt;
+
+input  cf, ct;
+
+output [31:0]  st;
+output [31:0]  sf;
+
+input [31:0]  at;
+input [31:0]  af;
+input [31:0]  bt;
+input [31:0]  bf;
+
+
+specify 
+    specparam CDS_LIBNAME  = "16nm";
+    specparam CDS_CELLNAME = "Martin_Add32";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

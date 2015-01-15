@@ -1,0 +1,7 @@
+pfet  M3 ( .D(Y), .B(cds_globals.vdd_), .G(B), .S(or_pd_ps));
+pfet  M2 ( .D(or_pd_ps), .B(cds_globals.vdd_), .G(A),
+     .S(cds_globals.vdd_));
+nfet  M1 ( .D(Y), .B(cds_globals.gnd_), .G(B), .S(cds_globals.gnd_));
+nfet  M0 ( .D(Y), .B(cds_globals.gnd_), .G(A), .S(cds_globals.gnd_));
+
+endmodule

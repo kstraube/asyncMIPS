@@ -1,0 +1,18 @@
+// Library - 16nm, Cell - inv_1x, View - schematic
+// LAST TIME SAVED: Dec 13 02:44:42 2014
+// NETLIST TIME: Jan 14 22:11:38 2015
+`timescale 1ps / 1ps 
+
+module inv_1x ( Y, A );
+
+output  Y;
+
+input  A;
+
+
+specify 
+    specparam CDS_LIBNAME  = "16nm";
+    specparam CDS_CELLNAME = "inv_1x";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

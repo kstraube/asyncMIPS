@@ -1,0 +1,4 @@
+nor_1x I6 ( AnorB, A, B);
+inv_1x I7 ( Y, AnorB);
+
+endmodule

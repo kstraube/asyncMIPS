@@ -1,0 +1,25 @@
+// Library - 16nm, Cell - nor_1x, View - schematic
+// LAST TIME SAVED: Aug 11 19:07:47 2014
+// NETLIST TIME: Jan 14 22:11:38 2015
+`timescale 1ps / 1ps 
+
+module nor_1x ( Y, A, B );
+
+output  Y;
+
+input  A, B;
+
+
+specify 
+    specparam CDS_LIBNAME  = "16nm";
+    specparam CDS_CELLNAME = "nor_1x";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+pfet  M3 ( .D(Y), .B(cds_globals.vdd_), .G(B), .S(or_pd_ps));
+pfet  M2 ( .D(or_pd_ps), .B(cds_globals.vdd_), .G(A),
+     .S(cds_globals.vdd_));
+nfet  M1 ( .D(Y), .B(cds_globals.gnd_), .G(B), .S(cds_globals.gnd_));
+nfet  M0 ( .D(Y), .B(cds_globals.gnd_), .G(A), .S(cds_globals.gnd_));
+
+endmodule

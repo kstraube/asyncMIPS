@@ -1,0 +1,40 @@
+// Library - 16nm, Cell - TH22, View - schematic
+// LAST TIME SAVED: Aug 12 01:14:38 2014
+// NETLIST TIME: Jan 14 22:11:39 2015
+`timescale 1ps / 1ps 
+
+module TH22 ( Y, A, B );
+
+output  Y;
+
+input  A, B;
+
+
+specify 
+    specparam CDS_LIBNAME  = "16nm";
+    specparam CDS_CELLNAME = "TH22";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+nfet  M5 ( .D(Y), .B(cds_globals.gnd_), .G(net5),
+     .S(cds_globals.gnd_));
+nfet  M4 ( .D(net5), .B(cds_globals.gnd_), .G(Y), .S(net9));
+nfet  M3 ( .D(net9), .B(cds_globals.gnd_), .G(B),
+     .S(cds_globals.gnd_));
+nfet  M2 ( .D(net9), .B(cds_globals.gnd_), .G(A),
+     .S(cds_globals.gnd_));
+nfet  M1 ( .D(net5), .B(cds_globals.gnd_), .G(B), .S(net17));
+nfet  M0 ( .D(net17), .B(cds_globals.gnd_), .G(A),
+     .S(cds_globals.gnd_));
+pfet  M11 ( .D(Y), .B(cds_globals.vdd_), .G(net5),
+     .S(cds_globals.vdd_));
+pfet  M10 ( .D(net5), .B(cds_globals.vdd_), .G(B), .S(net032));
+pfet  M9 ( .D(net032), .B(cds_globals.vdd_), .G(A),
+     .S(cds_globals.vdd_));
+pfet  M8 ( .D(net037), .B(cds_globals.vdd_), .G(B),
+     .S(cds_globals.vdd_));
+pfet  M7 ( .D(net037), .B(cds_globals.vdd_), .G(A),
+     .S(cds_globals.vdd_));
+pfet  M6 ( .D(net5), .B(cds_globals.vdd_), .G(Y), .S(net037));
+
+endmodule

@@ -1,0 +1,60 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "Martin_Add32"
+  repList "behavioral functional system verilog pld_verilog lai_verilog lmsi_verilog schematic symbol"
+  stopList "verilog pld_verilog lai_verilog lmsi_verilog symbol"
+  globalList "vdd! gnd!"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/root/Desktop/Cadence/verilog_test"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( instViewTable
+ )
+( defbus
+( "bf" 31 0  "bf" 31 0  )
+( "sf" 31 0  "sf" 31 0  )
+( "bt" 31 0  "bt" 31 0  )
+( "af" 31 0  "af" 31 0  )
+( "st" 31 0  "st" 31 0  )
+( "at" 31 0  "at" 31 0  )
+ )
+( net
+( "gnd!" "cds_globals.gnd_" )
+( "vdd!" "cds_globals.vdd_" )
+ )
+( inst
+ )
+( model
+( "16nm/TH22/schematic" "TH22" )
+( "16nm/TH44/schematic" "TH44" )
+( "16nm/Martin_Sum/schematic" "Martin_Sum" )
+( "16nm/Martin_Add/schematic" "Martin_Add" )
+( "16nm/Martin_Add32/schematic" "Martin_Add32" )
+( "16nm/inv_1x/schematic" "inv_1x" )
+( "16nm/nor_1x/schematic" "nor_1x" )
+( "16nm/or2_1x/schematic" "or2_1x" )
+( "16nm/Martin_Add4/schematic" "Martin_Add4" )
+( "16nm/Martin_Carry/schematic" "Martin_Carry" )
+ )
+( term
+ )
+( param
+ )
+( "TH22" "ihnl/cds8/map" )
+( "TH44" "ihnl/cds0/map" )
+( "Martin_Add" "ihnl/cds6/map" )
+( "Martin_Sum" "ihnl/cds2/map" )
+( "inv_1x" "ihnl/cds1/map" )
+( "Martin_Carry" "ihnl/cds3/map" )
+( "or2_1x" "ihnl/cds5/map" )
+( "Martin_Add32" "ihnl/cds9/map" )
+( "nor_1x" "ihnl/cds4/map" )
+( "Martin_Add4" "ihnl/cds7/map" )
+ )

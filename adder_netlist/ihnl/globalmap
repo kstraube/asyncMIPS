@@ -1,0 +1,21 @@
+CADENCE IHNL01070
+$model
+pfet pfet
+16nm/Martin_Add32/schematic Martin_Add32
+16nm/nor_1x/schematic nor_1x
+16nm/TH44/schematic TH44
+16nm/TH22/schematic TH22
+16nm/inv_1x/schematic inv_1x
+nfet nfet
+16nm/Martin_Add/schematic Martin_Add
+16nm/or2_1x/schematic or2_1x
+16nm/Martin_Sum/schematic Martin_Sum
+16nm/Martin_Carry/schematic Martin_Carry
+16nm/Martin_Add4/schematic Martin_Add4
+$endmodel
+$net
+vdd! cds_globals.vdd_
+gnd! cds_globals.gnd_
+$endnet
+$param
+$endparam

@@ -1,0 +1,18 @@
+// Library - 16nm, Cell - TH44, View - schematic
+// LAST TIME SAVED: Aug 11 19:04:25 2014
+// NETLIST TIME: Jan 14 22:11:38 2015
+`timescale 1ps / 1ps 
+
+module TH44 ( Y, A, B, C, D );
+
+output  Y;
+
+input  A, B, C, D;
+
+
+specify 
+    specparam CDS_LIBNAME  = "16nm";
+    specparam CDS_CELLNAME = "TH44";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

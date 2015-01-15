@@ -1,0 +1,40 @@
+// Library - 16nm, Cell - Martin_Add4, View - schematic
+// LAST TIME SAVED: Aug 14 03:00:50 2014
+// NETLIST TIME: Jan 14 22:11:38 2015
+`timescale 1ps / 1ps 
+
+module Martin_Add4 ( Req, df, dt, sf[3], sf[2], sf[1], sf[0], st[3],
+     st[2], st[1], st[0], af[3], af[2], af[1], af[0], at[3], at[2],
+     at[1], at[0], bf[3], bf[2], bf[1], bf[0], bt[3], bt[2], bt[1],
+     bt[0], cf, ct );
+
+output  Req, df, dt;
+
+input  cf, ct;
+
+output [0:3]  st;
+output [0:3]  sf;
+
+input [0:3]  af;
+input [0:3]  bt;
+input [0:3]  at;
+input [0:3]  bf;
+
+
+specify 
+    specparam CDS_LIBNAME  = "16nm";
+    specparam CDS_CELLNAME = "Martin_Add4";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+TH44 I10 ( Req, Req0, Req1, Req2, Req3);
+Martin_Add I3 ( Req3, df, dt, sf[3], st[3], af[3], at[3], bf[3], bt[3],
+     df2, dt2);
+Martin_Add I2 ( Req2, df2, dt2, sf[2], st[2], af[2], at[2], bf[2],
+     bt[2], df1, dt1);
+Martin_Add I1 ( Req1, df1, dt1, sf[1], st[1], af[1], at[1], bf[1],
+     bt[1], df0, dt0);
+Martin_Add I0 ( Req0, df0, dt0, sf[0], st[0], af[0], at[0], bf[0],
+     bt[0], cf, ct);
+
+endmodule
