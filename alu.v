@@ -15,9 +15,15 @@ module alu {
 	output nresult,
 	output nzero,
 	
+	output ready,
+	
 	output complete
 
 };
+
+	assign ready = ~adder_done;
+	
+	//need complete statement
 
 	always @(*) begin
 		
@@ -68,11 +74,11 @@ module alu {
 	);**/
 	
 	Martin_Add32 adder(
-		.Req(),
-		.df(),
-		.dt(),
-		.sf(),
-		.st(),
+		.Req(adder_done),
+		.df(),//carry out neg
+		.dt(), //carry out pos
+		.sf(nadder_out),
+		.st(adder_out), //sum pos
 		.af(nrs),
 		.at(rs),
 		.bf(nadder_in_2),
